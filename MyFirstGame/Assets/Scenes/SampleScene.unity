@@ -191,7 +191,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353002812}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -572,11 +572,13 @@ MonoBehaviour:
   returnColor: {r: 0.14117648, g: 0.41176474, b: 0.054901965, a: 0}
   hand: {fileID: 865264157}
   cam: {fileID: 963194225}
-  resetPoint: {fileID: 353002813}
-  reloadSpeed: -15
+  resetPoint: {fileID: 353002814}
+  reloadSpeed: -3
+  returnSpeed: 1
   currentSpeed: 0
   atOrigin: 0
   rotating: 0
+  returning: 0
 --- !u!54 &865264162
 Rigidbody:
   m_ObjectHideFlags: 0

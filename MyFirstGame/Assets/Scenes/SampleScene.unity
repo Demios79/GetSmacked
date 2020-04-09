@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d2f24bfdb0a758e41813bbc7ae4f978f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -297,7 +297,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e619f045904f375409b1c8e942e374c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -578,6 +578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body_Model
       objectReference: {fileID: 0}
+    - target: {fileID: -113181020801827196, guid: 12a72ddf3ebb06042b3e4af2e9e4b69c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44cdbf29f94fa044996dc16916a85b2b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12a72ddf3ebb06042b3e4af2e9e4b69c, type: 3}
 --- !u!4 &886183569 stripped
@@ -754,6 +759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Head_Model
       objectReference: {fileID: 0}
+    - target: {fileID: -113181020801827196, guid: 319d16a7609ed4849a16db18a63a3a83,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44cdbf29f94fa044996dc16916a85b2b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319d16a7609ed4849a16db18a63a3a83, type: 3}
 --- !u!1 &1178061669 stripped
@@ -842,7 +852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484640033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 707125994}
@@ -879,7 +889,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 43e1d496e451c754e9035b50a3093505, type: 2}
+  - {fileID: 2100000, guid: 0ca5f52a4a3f26a408d19bfe34700aff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1130,6 +1140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand_Model
       objectReference: {fileID: 0}
+    - target: {fileID: -113181020801827196, guid: 360bfa4f392351e418ac29096b6d6518,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ff3f2bfe2865f334585d7629cef6a20c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360bfa4f392351e418ac29096b6d6518, type: 3}
 --- !u!4 &1753131856 stripped
@@ -1203,7 +1218,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 43e1d496e451c754e9035b50a3093505, type: 2}
+  - {fileID: 2100000, guid: 0ca5f52a4a3f26a408d19bfe34700aff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -9,8 +9,9 @@ public class handMovement : MonoBehaviour
     public Color returnColor;
     public Transform hand;
     public GameObject cam;
-    public Transform resetPoint;
+    public Collider resetPoint;
     public float reloadSpeed;
+    public float returnSpeed;
     Vector3 origin;
     [SerializeField]
     private float currentSpeed;
@@ -18,14 +19,18 @@ public class handMovement : MonoBehaviour
     private bool atOrigin;
      [SerializeField]
     private bool rotating;
+    [SerializeField]
+    private bool returning;
+    private bool canCharge;
 
     // Start is called before the first frame update
     void Start()
     {
-        origin = resetPoint.transform.position;
         currentSpeed = 0;
         rotating = false;
         atOrigin = true;
+        returning = false;
+        canCharge = true;
     }
 
     // Update is called once per frame
@@ -34,63 +39,49 @@ public class handMovement : MonoBehaviour
         hand.RotateAround(cam.transform.position, cam.transform.up, currentSpeed);
         origin = resetPoint.transform.position;
 
-        if(hand.position == origin)
-        {
-            atOrigin = true;
-        }
-        else
-        {
-            atOrigin = false;
-        }
-
         if(Input.GetMouseButton(0))
         {
 
-            if(atOrigin && !rotating)
+            if(!rotating && canCharge && !returning)
             {
                 currentSpeed = reloadSpeed;
                 material.SetColor("_Color",color);
                 rotating = true;
-            }
-            if(hand.position == origin)
-            {
-                atOrigin = true;
-            }
-            else
-            {
                 atOrigin = false;
+                canCharge = false;
             }
 
-            
-            if(rotating && atOrigin)
+            if(atOrigin && rotating)
             {
                 currentSpeed = 0;
                 rotating = false;
             }
-
-            // if(currentSpeed != 0)
-            // {
-            //     currentSpeed = reloadSpeed;
-            // }
-            
-            // isRotate = true;
-            // hand.RotateAround(cam.transform.position, cam.transform.up, currentSpeed);
-            // if (hand.position == origin && isRotate)
-            // {
-            //     Debug.Log("BEIG PEEEn");
-            //     currentSpeed = 0;
-            //     isRotate = false;
-            // }
-            
+        
         }
-        else
+
+        if(!Input.GetMouseButton(0) && !canCharge)
         {
+            if((!returning && rotating) || (!returning && atOrigin))
+            {
+                atOrigin = false;
+                material.SetColor("_Color",returnColor);
+                currentSpeed = returnSpeed;
+                returning = true;
+                
+            }
 
+            else if(returning && atOrigin)
+            {
+                canCharge = true;
+                returning = false;
+                currentSpeed = 0;
+            }
         }
-        // else
-        // {
-        //     material.SetColor("_Color",returnColor);
-        //     hand.transform.position = origin;
-        // }
+
+    }
+
+    void OnTriggerEnter(Collider resetPoint) 
+    {
+        atOrigin = true;
     }
 }

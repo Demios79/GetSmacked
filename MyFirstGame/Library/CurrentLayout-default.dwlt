@@ -119,8 +119,8 @@ MonoBehaviour:
     y: 0
     width: 555
     height: 987
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -170,7 +170,11 @@ MonoBehaviour:
     x: 0
     y: 763
     width: 1365
+<<<<<<< HEAD
     height: 224
+=======
+    height: 223
+>>>>>>> PlebBranch
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
@@ -401,7 +405,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b4340000
     m_LastClickedID: 13492
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000083400000a340000
+=======
+    m_ExpandedIDs: 000000004c3400004e340000
+>>>>>>> PlebBranch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -429,7 +437,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000083400000a340000
+=======
+    m_ExpandedIDs: 000000004c3400004e340000
+>>>>>>> PlebBranch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -554,7 +566,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 62fbffff4a3300007c3300009e330000
+=======
+      m_ExpandedIDs: 86f8ffff
+>>>>>>> PlebBranch
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -668,7 +684,11 @@ MonoBehaviour:
   m_Size:
     m_Target: 5.084262
     speed: 2
+<<<<<<< HEAD
     m_Value: 5.084262
+=======
+    m_Value: 21.782438
+>>>>>>> PlebBranch
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -751,7 +771,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1

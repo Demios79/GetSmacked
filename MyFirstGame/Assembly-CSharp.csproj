@@ -614,6 +614,22 @@
       <Project>{6ee9e4c6-4176-0a90-2e1c-015967c1fd42}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.csproj">
+      <Project>{443d9942-d5ef-0fcb-0078-6b2d28c46ddf}</Project>
+      <Name>Unity.ProBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
+      <Project>{355b613c-9562-05cb-d0b7-de1745982c4a}</Project>
+      <Name>Unity.ProBuilder.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
+      <Project>{c87e18dd-74b8-913a-aaf6-7cb5f588dcea}</Project>
+      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
+      <Project>{da310d1a-c230-8780-bc0c-373367865ffd}</Project>
+      <Name>Unity.ProBuilder.AddOns.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

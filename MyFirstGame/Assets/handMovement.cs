@@ -12,7 +12,8 @@ public class handMovement : MonoBehaviour
     public Collider resetPoint;
     public float reloadSpeed;
     public float returnSpeed;
-    Vector3 origin;
+    public int timeMulti;
+    private Vector3 origin;
     [SerializeField]
     private float currentSpeed;
     [SerializeField]
@@ -21,7 +22,10 @@ public class handMovement : MonoBehaviour
     private bool rotating;
     [SerializeField]
     private bool returning;
+    [SerializeField]
     private bool canCharge;
+    private float accel;
+    private float time;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +35,11 @@ public class handMovement : MonoBehaviour
         atOrigin = true;
         returning = false;
         canCharge = true;
+        time = 0;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         hand.RotateAround(cam.transform.position, cam.transform.up, currentSpeed);
         origin = resetPoint.transform.position;
@@ -44,7 +49,8 @@ public class handMovement : MonoBehaviour
 
             if(!rotating && canCharge && !returning)
             {
-                currentSpeed = reloadSpeed;
+                time += Time.deltaTime;
+                currentSpeed = (reloadSpeed) * time * timeMulti;
                 material.SetColor("_Color",color);
                 rotating = true;
                 atOrigin = false;
@@ -55,6 +61,7 @@ public class handMovement : MonoBehaviour
             {
                 currentSpeed = 0;
                 rotating = false;
+                time = 0;
             }
         
         }
@@ -63,10 +70,12 @@ public class handMovement : MonoBehaviour
         {
             if((!returning && rotating) || (!returning && atOrigin))
             {
+                time += Time.deltaTime;
                 atOrigin = false;
                 material.SetColor("_Color",returnColor);
-                currentSpeed = returnSpeed;
+                currentSpeed = (returnSpeed) * time * timeMulti;
                 returning = true;
+                rotating = false;
                 
             }
 
@@ -74,6 +83,7 @@ public class handMovement : MonoBehaviour
             {
                 canCharge = true;
                 returning = false;
+                time = 0;
                 currentSpeed = 0;
             }
         }

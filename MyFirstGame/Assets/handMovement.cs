@@ -22,6 +22,7 @@ public class handMovement : MonoBehaviour
     private bool rotating;
     [SerializeField]
     private bool returning;
+    [SerializeField]
     private bool canCharge;
     private float accel;
     private float time;
@@ -74,6 +75,7 @@ public class handMovement : MonoBehaviour
                 material.SetColor("_Color",returnColor);
                 currentSpeed = (returnSpeed) * time * timeMulti;
                 returning = true;
+                rotating = false;
                 
             }
 
@@ -81,6 +83,7 @@ public class handMovement : MonoBehaviour
             {
                 canCharge = true;
                 returning = false;
+                time = 0;
                 currentSpeed = 0;
             }
         }
